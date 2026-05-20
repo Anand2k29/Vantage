@@ -40,7 +40,7 @@ Below is a premium design representation of the Vantage Predictive Analytics Das
    - Evaluates models using a rolling expanding-window **Walk-Forward Validation** harness to measure real-world performance.
    - Trains a specialized discharge predictor to support the feedback loops in the simulation engine.
 
-3. **Interactive Control Center (`app.py`)**
+3. **Interactive Control Center (`streamlit_app.py`)**
    - **Executive Dashboard**: KPI metrics (net pressure, utilization rates) and interactive forecasting charts with confidence interval shading.
    - **Early Warning System**: Automatic alert triggers and calendar view schedules recommending when to activate emergency standby staffing.
    - **Sandbox Simulation (What-If)**: A playground to model how a border apprehension surge propagates through the network, dynamically forecasting peak occupancy and capacity breach days.
@@ -59,7 +59,7 @@ Vantage/
 │   └── mock_uac_data.csv         # Synthetic dataset for fallback testing
 ├── api/
 │   └── index.py                  # Optional: Serverless FastAPI backend entry point
-├── app.py                         # Streamlit command center UI
+├── streamlit_app.py               # Streamlit command center UI
 ├── data_processing.py             # Data engineering & feature creation pipeline
 ├── modeling.py                    # Forecast model definitions & validation harness
 ├── generate_mock_data.py          # Synthetic dataset generator
@@ -102,7 +102,7 @@ python modeling.py
 ### 3. Launch the Streamlit Dashboard
 Launch the dashboard on localhost:
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 This will automatically launch the browser at `http://localhost:8501`.
 
@@ -125,7 +125,7 @@ Streamlit is a stateful framework that uses persistent WebSockets for client-ser
 The easiest way to deploy the dashboard is through Streamlit's official cloud service:
 1. Push the code to your GitHub repository.
 2. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/).
-3. Click **"New app"**, select your repository, branch (`main`), and main file path (`app.py`).
+3. Click **"New app"**, select your repository, branch (`main`), and main file path (`streamlit_app.py`).
 4. Click **"Deploy"**. The app will be live and automatically redeploy on every git push!
 
 ### 🤖 2. Hugging Face Spaces (Free ML Hosting)
