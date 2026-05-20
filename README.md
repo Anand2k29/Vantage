@@ -22,7 +22,7 @@ Manual planning in humanitarian systems often leads to operational bottlenecks. 
 ## 🌟 Visual Mockup of the UI
 Below is a premium design representation of the Vantage Predictive Analytics Dashboard:
 
-![Vantage Dashboard UI](vantage_dashboard_ui.png)
+![Vantage Dashboard UI](vantage_ui_dashboard.png)
 
 ---
 
